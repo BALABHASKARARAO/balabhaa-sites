@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-AWS/ec2" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">EC2 | balabhaa</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://balabhaa.in/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://balabhaa.in/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://balabhaa.in/docs/AWS/ec2"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="EC2 | balabhaa"><meta data-rh="true" name="description" content="Introduction"><meta data-rh="true" property="og:description" content="Introduction"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://balabhaa.in/docs/AWS/ec2"><link data-rh="true" rel="alternate" href="https://balabhaa.in/docs/AWS/ec2" hreflang="en"><link data-rh="true" rel="alternate" href="https://balabhaa.in/docs/AWS/ec2" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"EC2","item":"https://balabhaa.in/docs/AWS/ec2"}]}</script><link rel="stylesheet" href="/assets/css/styles.27e5e8f9.css">
+<script src="/assets/js/runtime~main.0e8bd269.js" defer="defer"></script>
+<script src="/assets/js/main.401dd77b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/bala-image.jpg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/bala-image.jpg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/bala-image.jpg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">balabhaa</b></a><a class="navbar__item navbar__link" href="/docs/DevOps/intro">DevOps</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/AWS/about">AWS</a><a class="navbar__item navbar__link" href="/docs/GENAI/notes/">GENAI</a><a class="navbar__item navbar__link" href="/docs/pra/aws/pra">pra</a><a class="navbar__item navbar__link" href="/docs/About/">About</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/AWS/about">AWS Cloud intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/AWS/aws-global-infrastructure">aws global infrastructure</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/AWS/iam">IAM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/AWS/ec2">EC2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/AWS/s3">S3</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">EC2</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Amazon EC2 (Elastic Compute Cloud)</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<p>Amazon <strong>EC2 (Elastic Compute Cloud)</strong> is one of the core services in AWS that provides <strong>virtual servers in the cloud</strong>. It belongs to the <strong>Infrastructure as a Service (IaaS)</strong> model of cloud computing.</p>
+<p>In traditional on-premise environments, organizations had to purchase and maintain physical servers. With EC2, developers and system administrators can launch <strong>virtual machines on demand</strong>, eliminating the need to manage physical hardware.</p>
+<p>These virtual machines are called <strong>EC2 Instances</strong>.<br>
+<!-- -->An EC2 instance can run different operating systems such as:</p>
+<ul>
+<li>Linux distributions (Amazon Linux, Ubuntu, Red Hat, etc.)</li>
+<li>Windows Server</li>
+</ul>
+<p>Developers can launch instances based on their application requirements using the AWS Console, CLI, SDKs, or infrastructure automation tools such as <strong>Terraform</strong>.</p>
+<hr>
+<h1>Key Concepts in the EC2 Ecosystem</h1>
+<p>To effectively work with EC2, it is important to understand several related components and services:</p>
+<ul>
+<li>AMI (Amazon Machine Image)</li>
+<li>EBS Volumes</li>
+<li>Snapshots</li>
+<li>Auto Scaling</li>
+<li>Load Balancers</li>
+<li>Instance connectivity methods</li>
+</ul>
+<p>Each of these components plays an important role in building scalable and reliable cloud infrastructure.</p>
+<hr>
+<h1>EBS Volume (Elastic Block Store)</h1>
+<p>Amazon <strong>Elastic Block Store (EBS)</strong> provides <strong>block-level storage</strong> that can be attached to EC2 instances.</p>
+<p>When an EC2 instance is launched, it requires storage for:</p>
+<ul>
+<li>Operating system files</li>
+<li>Application binaries</li>
+<li>Configuration files</li>
+<li>Logs and runtime data</li>
+</ul>
+<p>EBS volumes serve this purpose. They function similarly to <strong>SSD or HDD disks attached to a physical server</strong>.</p>
+<p>Developers can perform standard filesystem operations on EBS volumes such as:</p>
+<ul>
+<li>Creating files</li>
+<li>Modifying files</li>
+<li>Deleting files</li>
+<li>Installing applications</li>
+</ul>
+<p>Because EBS allows direct read and write operations at the block level, it is categorized as <strong>block storage</strong>.</p>
+<p>A simple analogy:</p>
+<ul>
+<li><strong>EBS → Similar to an SSD disk attached to a laptop or server</strong></li>
+</ul>
+<hr>
+<h1>Difference Between EBS and S3</h1>
+<p>Although both EBS and S3 provide storage, they serve different use cases.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ebs-block-storage">EBS (Block Storage)<a href="#ebs-block-storage" class="hash-link" aria-label="Direct link to EBS (Block Storage)" title="Direct link to EBS (Block Storage)">​</a></h2>
+<ul>
+<li>Attached directly to EC2 instances</li>
+<li>Supports read/write operations like a disk</li>
+<li>Used for operating systems and application storage</li>
+<li>Low latency</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="s3-object-storage">S3 (Object Storage)<a href="#s3-object-storage" class="hash-link" aria-label="Direct link to S3 (Object Storage)" title="Direct link to S3 (Object Storage)">​</a></h2>
+<ul>
+<li>Stores data as objects</li>
+<li>Used for backups, static files, logs, and large datasets</li>
+<li>Files cannot be modified directly</li>
+<li>Objects must be re-uploaded to update them</li>
+</ul>
+<p>A simple analogy:</p>
+<ul>
+<li><strong>EBS → Laptop SSD</strong></li>
+<li><strong>S3 → Cloud storage like Google Drive</strong></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-ebs-volumes">Types of EBS Volumes<a href="#types-of-ebs-volumes" class="hash-link" aria-label="Direct link to Types of EBS Volumes" title="Direct link to Types of EBS Volumes">​</a></h2>
+<p>AWS provides different EBS volume types based on performance and workload requirements.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="general-purpose-ssd-gp2--gp3">General Purpose SSD (gp2 / gp3)<a href="#general-purpose-ssd-gp2--gp3" class="hash-link" aria-label="Direct link to General Purpose SSD (gp2 / gp3)" title="Direct link to General Purpose SSD (gp2 / gp3)">​</a></h3>
+<p>General purpose volumes provide balanced performance and cost.</p>
+<p>Typical use cases:</p>
+<ul>
+<li>Development environments</li>
+<li>Small to medium applications</li>
+<li>General server workloads</li>
+</ul>
+<p>These are the most commonly used volumes.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="provisioned-iops-ssd-io1--io2">Provisioned IOPS SSD (io1 / io2)<a href="#provisioned-iops-ssd-io1--io2" class="hash-link" aria-label="Direct link to Provisioned IOPS SSD (io1 / io2)" title="Direct link to Provisioned IOPS SSD (io1 / io2)">​</a></h3>
+<p>Provisioned IOPS volumes are designed for <strong>high-performance workloads</strong> that require consistent disk performance.</p>
+<p>IOPS stands for <strong>Input/Output Operations Per Second</strong>, which measures storage performance.</p>
+<p>Typical use cases include:</p>
+<ul>
+<li>High-performance databases</li>
+<li>Large production systems</li>
+<li>Transaction-heavy workloads</li>
+</ul>
+<p>Since these volumes provide guaranteed performance, they are <strong>more expensive</strong>.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="magnetic-standard-hdd">Magnetic (Standard HDD)<a href="#magnetic-standard-hdd" class="hash-link" aria-label="Direct link to Magnetic (Standard HDD)" title="Direct link to Magnetic (Standard HDD)">​</a></h3>
+<p>Magnetic volumes are legacy storage types that offer lower performance compared to SSD volumes.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Lower IOPS</li>
+<li>Higher latency</li>
+<li>Mostly replaced by modern SSD-based storage</li>
+</ul>
+<p>These volumes are rarely used in modern cloud architectures.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="amazon-machine-image-ami">Amazon Machine Image (AMI)<a href="#amazon-machine-image-ami" class="hash-link" aria-label="Direct link to Amazon Machine Image (AMI)" title="Direct link to Amazon Machine Image (AMI)">​</a></h2>
+<p>An <strong>Amazon Machine Image (AMI)</strong> is a template used to launch EC2 instances.</p>
+<p>An AMI contains:</p>
+<ul>
+<li>Operating system</li>
+<li>Application software</li>
+<li>Application binaries</li>
+<li>Configuration settings</li>
+<li>Additional system components</li>
+</ul>
+<p>When a virtual machine is configured with required software and settings, an AMI can be created from that instance.</p>
+<p>This AMI can then be used to launch <strong>multiple identical EC2 instances</strong>, ensuring consistent environments across deployments.</p>
+<p>In simple terms:</p>
+<blockquote>
+<p>An AMI is a reusable template for creating EC2 instances.</p>
+</blockquote>
+<p>This concept is similar to creating a <strong>snapshot or image of a configured server</strong> so that it can be replicated quickly.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="auto-scaling"><strong>Auto Scaling</strong><a href="#auto-scaling" class="hash-link" aria-label="Direct link to auto-scaling" title="Direct link to auto-scaling">​</a></h2>
+<p>In production environments, a single EC2 instance is often not sufficient to handle all user requests. Applications must be able to <strong>scale automatically based on demand</strong>.</p>
+<p><strong>Auto Scaling</strong> allows AWS to automatically increase or decrease the number of EC2 instances based on workload requirements.</p>
+<p>Scaling decisions are typically based on metrics such as:</p>
+<ul>
+<li>CPU utilization</li>
+<li>Memory usage</li>
+<li>Network traffic</li>
+<li>Request count</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>If CPU usage exceeds <strong>70%</strong>, additional instances can be launched.</li>
+<li>If the workload decreases, unused instances can be terminated automatically.</li>
+</ul>
+<p>This helps achieve:</p>
+<ul>
+<li>High availability</li>
+<li>Better performance</li>
+<li>Cost optimization</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="load-balancer">Load Balancer<a href="#load-balancer" class="hash-link" aria-label="Direct link to Load Balancer" title="Direct link to Load Balancer">​</a></h2>
+<p>When multiple EC2 instances are running, incoming user traffic must be distributed across those instances.</p>
+<p>A <strong>Load Balancer</strong> distributes incoming requests across multiple EC2 instances to ensure:</p>
+<ul>
+<li>High availability</li>
+<li>Fault tolerance</li>
+<li>Even traffic distribution</li>
+<li>Improved application performance</li>
+</ul>
+<p>AWS provides different types of load balancers:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="application-load-balancer-alb">Application Load Balancer (ALB)<a href="#application-load-balancer-alb" class="hash-link" aria-label="Direct link to Application Load Balancer (ALB)" title="Direct link to Application Load Balancer (ALB)">​</a></h3>
+<ul>
+<li>Operates at <strong>Layer 7 (HTTP/HTTPS)</strong></li>
+<li>Ideal for web applications and microservices</li>
+<li>Supports path-based routing</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="network-load-balancer-nlb">Network Load Balancer (NLB)<a href="#network-load-balancer-nlb" class="hash-link" aria-label="Direct link to Network Load Balancer (NLB)" title="Direct link to Network Load Balancer (NLB)">​</a></h3>
+<ul>
+<li>Operates at <strong>Layer 4 (TCP/UDP)</strong></li>
+<li>Designed for extremely high performance and low latency</li>
+<li>Handles millions of requests per second</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gateway-load-balancer-gwlb">Gateway Load Balancer (GWLB)<a href="#gateway-load-balancer-gwlb" class="hash-link" aria-label="Direct link to Gateway Load Balancer (GWLB)" title="Direct link to Gateway Load Balancer (GWLB)">​</a></h3>
+<ul>
+<li>Used for deploying and scaling network security appliances</li>
+<li>Typically used in advanced networking architectures</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="elasticity-vs-scalability"><strong>Elasticity vs Scalability</strong><a href="#elasticity-vs-scalability" class="hash-link" aria-label="Direct link to elasticity-vs-scalability" title="Direct link to elasticity-vs-scalability">​</a></h2>
+<p>This is a common interview question related to cloud computing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scalability">Scalability<a href="#scalability" class="hash-link" aria-label="Direct link to Scalability" title="Direct link to Scalability">​</a></h3>
+<p>Scalability refers to the ability of a system to <strong>handle increasing workloads by adding more resources</strong>.</p>
+<p>Example:</p>
+<ul>
+<li>Adding more EC2 instances</li>
+<li>Increasing instance size</li>
+</ul>
+<p>Scalability can be:</p>
+<ul>
+<li><strong>Vertical scaling</strong> (increase instance size)</li>
+<li><strong>Horizontal scaling</strong> (add more instances)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="elasticity">Elasticity<a href="#elasticity" class="hash-link" aria-label="Direct link to Elasticity" title="Direct link to Elasticity">​</a></h3>
+<p>Elasticity refers to the ability of a system to <strong>automatically adjust resources up or down based on real-time demand</strong>.</p>
+<p>Example:</p>
+<ul>
+<li>Automatically launching additional EC2 instances during peak traffic</li>
+<li>Automatically terminating instances when demand decreases</li>
+</ul>
+<p>Elasticity is typically implemented using <strong>Auto Scaling</strong>.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interview-answer">interview Answer<a href="#interview-answer" class="hash-link" aria-label="Direct link to interview Answer" title="Direct link to interview Answer">​</a></h3>
+<ul>
+<li>Scalability is the ability to handle increased workload by adding more resources, whereas Elasticity is the ability to automatically add or remove resources in real time based on demand.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="connecting-to-ec2-instances">Connecting to EC2 Instances<a href="#connecting-to-ec2-instances" class="hash-link" aria-label="Direct link to Connecting to EC2 Instances" title="Direct link to Connecting to EC2 Instances">​</a></h2>
+<p>Developers and administrators can connect to EC2 instances using multiple methods.</p>
+<p>Common connection methods include:</p>
+<ul>
+<li>SSH (for Linux instances)</li>
+<li>RDP (for Windows instances)</li>
+<li>AWS Systems Manager Session Manager</li>
+</ul>
+<p>When using SSH, <strong>public key and private key authentication</strong> is used.</p>
+<p>A <strong>key pair</strong> consists of:</p>
+<ul>
+<li><strong>Public Key</strong> – Stored on the EC2 instance</li>
+<li><strong>Private Key</strong> – Stored securely by the user</li>
+</ul>
+<p>The private key is used to authenticate and establish a secure connection to the instance.</p>
+<hr>
+<h1>Summary</h1>
+<p>Amazon EC2 provides on-demand virtual machines that allow developers and organizations to deploy applications without managing physical infrastructure.</p>
+<p>By combining EC2 with services such as:</p>
+<ul>
+<li>EBS</li>
+<li>AMI</li>
+<li>Auto Scaling</li>
+<li>Load Balancers</li>
+</ul>
+<p>AWS enables the creation of highly scalable, reliable, and fault-tolerant cloud architectures.</p>
+<p>Understanding these core EC2 components is essential for building modern cloud-native applications.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/AWS/4-ec2.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/AWS/iam"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">IAM</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/AWS/s3"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">S3</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#ebs-block-storage" class="table-of-contents__link toc-highlight">EBS (Block Storage)</a></li><li><a href="#s3-object-storage" class="table-of-contents__link toc-highlight">S3 (Object Storage)</a></li><li><a href="#types-of-ebs-volumes" class="table-of-contents__link toc-highlight">Types of EBS Volumes</a><ul><li><a href="#general-purpose-ssd-gp2--gp3" class="table-of-contents__link toc-highlight">General Purpose SSD (gp2 / gp3)</a></li><li><a href="#provisioned-iops-ssd-io1--io2" class="table-of-contents__link toc-highlight">Provisioned IOPS SSD (io1 / io2)</a></li><li><a href="#magnetic-standard-hdd" class="table-of-contents__link toc-highlight">Magnetic (Standard HDD)</a></li></ul></li><li><a href="#amazon-machine-image-ami" class="table-of-contents__link toc-highlight">Amazon Machine Image (AMI)</a></li><li><a href="#auto-scaling" class="table-of-contents__link toc-highlight"><strong>Auto Scaling</strong></a></li><li><a href="#load-balancer" class="table-of-contents__link toc-highlight">Load Balancer</a><ul><li><a href="#application-load-balancer-alb" class="table-of-contents__link toc-highlight">Application Load Balancer (ALB)</a></li><li><a href="#network-load-balancer-nlb" class="table-of-contents__link toc-highlight">Network Load Balancer (NLB)</a></li><li><a href="#gateway-load-balancer-gwlb" class="table-of-contents__link toc-highlight">Gateway Load Balancer (GWLB)</a></li></ul></li><li><a href="#elasticity-vs-scalability" class="table-of-contents__link toc-highlight"><strong>Elasticity vs Scalability</strong></a><ul><li><a href="#scalability" class="table-of-contents__link toc-highlight">Scalability</a></li><li><a href="#elasticity" class="table-of-contents__link toc-highlight">Elasticity</a></li><li><a href="#interview-answer" class="table-of-contents__link toc-highlight">interview Answer</a></li></ul></li><li><a href="#connecting-to-ec2-instances" class="table-of-contents__link toc-highlight">Connecting to EC2 Instances</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
