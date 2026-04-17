@@ -1,130 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Balabhaa Technologies Pvt Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Balabhaa Technologies Pvt Ltd provides cloud, DevOps, software development, consulting, and digital transformation services." />
   <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-dark: #16304d;
+      --accent: #dbeafe;
+      --highlight: #0f766e;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --bg: #f7fafc;
+      --white: #ffffff;
+      --border: #dbe3ec;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
     header {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: linear-gradient(135deg, #1e3a5f, #2f5f8f);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .hero {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .services {
+    .nav-wrap {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .card {
-      flex: 1 1 30%;
-      background: #fafafa;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    @media(max-width: 768px) {
-      .services {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>Balabhaa Technologies Pvt Ltd</h1>
-  <p>Building Modern Digital Solutions</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>We help businesses build, scale, and succeed</h2>
-  <p>Cloud | DevOps | Software Development | Consulting</p>
-</section>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    Balabhaa Technologies Pvt Ltd provides reliable and scalable technology solutions.
-    We focus on cloud engineering, automation, and custom software development
-    to help businesses grow efficiently.
-  </p>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>Cloud & DevOps</h3>
-      <p>Infrastructure automation, CI/CD pipelines, AWS & GCP solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Software Development</h3>
-      <p>Custom web applications, APIs, and enterprise solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Consulting</h3>
-      <p>Architecture design, optimization, and technical advisory.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: info@balabhaa.com</p>
-  <p>Phone: +91 98765 43210</p>
-  <p>Location: Chennai, India</p>
-</section>
-
-<footer>
-  <p>© 2026 Balabhaa Technologies Pvt Ltd</p>
-</footer>
-
-</body>
-</html>
+      align-items: center;
+      justify-content: space-between;
