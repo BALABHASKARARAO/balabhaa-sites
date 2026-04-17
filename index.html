@@ -4,21 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Balabhaa Technologies Pvt Ltd</title>
-  <meta name="description" content="Balabhaa Technologies Pvt Ltd provides cloud, DevOps, software development, consulting, and digital transformation services." />
+  <meta
+    name="description"
+    content="Balabhaa Technologies Pvt Ltd provides cloud, DevOps, software development, consulting, and digital transformation services."
+  />
   <style>
     :root {
-      --primary: #1e3a5f;
-      --primary-dark: #16304d;
-      --accent: #dbeafe;
-      --highlight: #0f766e;
-      --text: #1f2937;
-      --muted: #5b6472;
-      --bg: #f7fafc;
+      --primary: #1f4e79;
+      --primary-dark: #163a5a;
+      --secondary: #2f6f8f;
+      --accent: #0f766e;
+      --light-bg: #f4f8fb;
+      --section-bg: #eef5fb;
       --white: #ffffff;
-      --border: #dbe3ec;
-      --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #d8e3ee;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
       --radius: 18px;
-      scroll-behavior: smooth;
     }
 
     * {
@@ -33,7 +36,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: var(--light-bg);
       line-height: 1.65;
     }
 
@@ -48,15 +51,564 @@
     }
 
     header {
-      background: linear-gradient(135deg, #1e3a5f, #2f5f8f);
+      background: linear-gradient(135deg, #1f4e79, #4f87b3);
       color: var(--white);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
     }
 
     .nav-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    nav a:hover {
+      background: var(--white);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eaf4ff 0%, #f4f8fb 100%);
+      padding: 86px 0 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #dcecff;
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      line-height: 1.15;
+      color: #10243a;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: #0b625d;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-list li {
+      background: #f8fbff;
+      border: 1px solid #e4edf7;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: #2d4054;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      color: #10243a;
+    }
+
+    .section-subtitle {
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      max-width: 800px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+    }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .stat-box {
+      background: #f8fbff;
+      border: 1px solid #e5edf7;
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .services-section {
+      background: var(--section-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .service-card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-card,
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3,
+    .contact-form h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.35rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .contact-item {
+      background: #f8fbff;
+      border: 1px solid #e5edf7;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #10243a;
+    }
+
+    .contact-form form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border-radius: 12px;
+      border: 1px solid #cfd9e6;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #eaf4ff;
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      text-align: center;
+      color: #29415b;
+      font-weight: 600;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .services-grid,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav a {
+        text-align: center;
+        flex: 1 1 calc(50% - 12px);
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .brand {
+        font-size: 1.45rem;
+      }
+
+      .hero {
+        padding-top: 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <div class="brand">Balabhaa Technologies Pvt Ltd</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Trusted Technology Partner</span>
+        <h1>Helping businesses modernize, automate, and grow with confidence.</h1>
+        <p>
+          Balabhaa Technologies Pvt Ltd delivers practical, scalable, and business-focused
+          technology solutions. We support organizations in cloud adoption, DevOps
+          transformation, software engineering, automation, and consulting services that
+          improve efficiency, reliability, and long-term growth.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Contact Us</a>
+          <a class="btn btn-secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>What we deliver</h3>
+        <ul class="hero-list">
+          <li>Cloud architecture, migration, and infrastructure modernization</li>
+          <li>DevOps automation, CI/CD pipelines, and platform engineering</li>
+          <li>Custom software solutions, APIs, and internal business tools</li>
+          <li>Technical consulting, optimization, and reliable support services</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">
+        We are a technology-driven company focused on delivering dependable digital solutions
+        that help businesses move faster, work smarter, and scale with stability.
+      </p>
+
+      <div class="about-grid">
+        <div class="panel">
+          <p>
+            Balabhaa Technologies Pvt Ltd provides reliable and scalable technology services
+            tailored to modern business needs. Our work is centered on transforming technical
+            challenges into practical, maintainable, and high-value solutions.
+          </p>
+          <p>
+            We support businesses with cloud engineering, DevOps implementation, automation,
+            software development, and consulting. Whether an organization needs a new
+            application, infrastructure modernization, process automation, or ongoing technical
+            support, we aim to deliver outcomes that are secure, efficient, and ready for growth.
+          </p>
+          <p>
+            Our approach combines technical depth with a strong understanding of business goals.
+            We believe technology should not only function well, but also create measurable value
+            by improving performance, reliability, speed of delivery, and operational efficiency.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="stats">
+            <div class="stat-box">
+              <strong>Cloud</strong>
+              <span>AWS, GCP, migration, modernization</span>
+            </div>
+            <div class="stat-box">
+              <strong>DevOps</strong>
+              <span>CI/CD, automation, infrastructure as code</span>
+            </div>
+            <div class="stat-box">
+              <strong>Software</strong>
+              <span>Web apps, APIs, portals, internal tools</span>
+            </div>
+            <div class="stat-box">
+              <strong>Consulting</strong>
+              <span>Advisory, optimization, support, delivery guidance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        We offer a focused set of technology services designed to help organizations strengthen
+        their digital foundation, accelerate delivery, and achieve reliable business outcomes.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Cloud & DevOps</h3>
+          <p>
+            We help businesses build and manage modern cloud environments with strong emphasis
+            on automation, scalability, and operational reliability.
+          </p>
+          <ul>
+            <li>Cloud infrastructure setup and optimization</li>
+            <li>CI/CD pipeline design and automation</li>
+            <li>Infrastructure as code implementation</li>
+            <li>Monitoring, deployment, and environment management</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Software Development</h3>
+          <p>
+            We design and develop modern software solutions that support business operations,
+            digital services, and customer-facing applications.
+          </p>
+          <ul>
+            <li>Custom web application development</li>
+            <li>API and backend service development</li>
+            <li>Internal tools and workflow platforms</li>
+            <li>Application enhancement and modernization</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Consulting & Support</h3>
+          <p>
+            We provide strategic and technical guidance to help organizations make better
+            decisions, reduce complexity, and improve delivery confidence.
+          </p>
+          <ul>
+            <li>Architecture and solution consulting</li>
+            <li>Technology assessment and optimization</li>
+            <li>Implementation support and advisory</li>
+            <li>Ongoing technical assistance and best practices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Get in touch with us to discuss your cloud, DevOps, software, or consulting
+        requirements. We would be glad to understand your needs and support your next initiative.
+      </p>
+
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>Our Contact Details</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:balag@balabhaa.in">balag@balabhaa.in</a>
+            </div>
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:+9199989825317">+91 99989825317</a>
+            </div>
+            <div class="contact-item">
+              <strong>Location</strong>
+              Ayesha complex, 1st Stage, BTM Layout, Bangalore
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send an Enquiry</h3>
+          <form action="mailto:balag@balabhaa.in" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email Address" required />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Write your message here" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+          <p class="note">
+            This form opens your default email application to send the enquiry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Balabhaa Technologies Pvt Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
